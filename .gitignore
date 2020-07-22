@@ -338,3 +338,4 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/MeTracker/MeTracker.Android/Resources/values/secrets.xml
