@@ -9,5 +9,6 @@ namespace MeTracker.Repositories
 	public interface ILocationRepository
 	{
 		Task Save(Location location);
+		Task<List<Location>> GetAll();
 	}
 }

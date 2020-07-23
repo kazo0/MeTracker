@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using MeTracker.Models;
@@ -15,6 +16,12 @@ namespace MeTracker.Repositories
 			await CreateConnection();
 
 			await _connection.InsertAsync(location);
+		}
+
+		public async Task<List<Location>> GetAll()
+		{
+			await CreateConnection();
+			return await _connection.Table<Location>().ToListAsync();
 		}
 
 		private async Task CreateConnection()
