@@ -22,9 +22,9 @@ namespace MeTracker.Droid.Services
 		private readonly ILocationRepository _locationRepository;
 		private static LocationManager _locationManager;
 
-		public LocationJobService(ILocationRepository locationRepository)
+		public LocationJobService()
 		{
-			_locationRepository = locationRepository;
+			_locationRepository = Resolver.Resolve<ILocationRepository>();
 		}
 
 		public override bool OnStartJob(JobParameters @params)
